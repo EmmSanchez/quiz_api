@@ -4,7 +4,7 @@ import { QuestionController } from "./controllers/questions.js";
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://quiz-app-web-plum.vercel.app/",
+  "https://quiz-app-web-plum.vercel.app",
 ];
 
 const app = express();
