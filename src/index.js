@@ -22,7 +22,7 @@ app.use(
   })
 );
 
-const PORT = process.env.PORT ?? 1234;
+const PORT = process.env.PORT ?? 5173;
 
 app.get("/questions", QuestionController.getRandomQuestions);
 

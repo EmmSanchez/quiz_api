@@ -1,14 +1,20 @@
-import { QuestionModel } from "../models/postgresql/question.js";
+// import { QuestionModel } from "../models/postgresql/supabase/question.js";
+import { QuestionModel } from "../models/postgresql/railway/question.js";
 import { getRandomQuestions } from "../utils/random.js";
 
 export class QuestionController {
   static async getRandomQuestions(req, res) {
     try {
       const { topic, difficult, quantity } = req.query;
-      const questions = await QuestionModel.getRandomQuestions({
-        topic,
-        difficult,
-      });
+
+      /* SUPABASE */
+      // const questions = await QuestionModel.getRandomQuestions({
+      //   topic,
+      //   difficult,
+      // });
+
+      /* RAILWAY */
+      const questions = await QuestionModel.GetQuestions({ topic, difficult });
 
       const mappedQuestions = questions?.map((question) => ({
         question_text: question.question_text,

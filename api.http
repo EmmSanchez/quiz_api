@@ -1,1 +1,7 @@
 GET http://localhost:1234/questions?topic=javascript&difficult=medium&quantity=5
+
+###
+GET http://localhost:5173/questions?topic=javascript&difficult=hard&quantity=2
+
+###
+GET http://localhost:5173/questions?topic=python&difficult=easy&quantity=1
